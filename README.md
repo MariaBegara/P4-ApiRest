@@ -17,10 +17,9 @@ A continuación se muestra el la ruta, el cuerpo, la descripción y posibles res
 ## Descripción de los Endpoints
 
 ### 1. Obtener todos los consejos
-
 **Método**: `GET`  
 **Ruta**: `/api/consejos`  
-**Descripción**: Este endpoint obtiene todos los consejos disponibles.  
+**Descripción**: Este endpoint obtiene todos los consejos disponibles. En los consejos no aparecerá el usuario para evitar que otro usuario modifique un consejo que no es suyo.
 **Respuestas**:
 - `200 OK`: Si se encuentran consejos, se devuelven como una lista de objetos JSON.
 - `404 Not Found`: Si no hay consejos almacenados.
@@ -30,9 +29,29 @@ A continuación se muestra el la ruta, el cuerpo, la descripción y posibles res
 **Método**: `POST`  
 **Ruta**: `/api/consejos`  
 **Cuerpo**:
-```json
+json
 {
   "titulo": "Título del consejo",
   "usuario": "Nombre del usuario",
   "mensaje": "Mensaje del consejo (entre 20 y 300 palabras)"
 }
+
+
+### 3. Modificar un consejo
+**Método**: `PUT`  
+**Ruta**: `/api/consejos/titulo/{titulo}/usuario/{usuario}`
+**Cuerpo**:
+
+json
+{
+  "mensaje": "Mensaje actualizado del consejo (entre 20 y 300 palabras)"
+}
+
+
+### 4.Eliminar un consejo
+**Método**: `DELETE`
+**Ruta**: /api/consejos/titulo/{titulo}/usuario/{usuario}
+**Descripción**: Elimina un consejo específico, identificado por su título y el nombre del usuario.
+**Respuestas**:
+- `204 No Content`: El consejo se ha eliminado correctamente.
+- `404 Not Found`: No se encuentra el consejo con el título y usuario proporcionados.
