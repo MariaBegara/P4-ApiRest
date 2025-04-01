@@ -9,10 +9,10 @@ A continuación se muestra el la ruta, el cuerpo, la descripción y posibles res
 
 | Método | Ruta                | Cuerpo requerido                                                      | Descripción                                 | Respuestas posibles    |
 |--------|---------------------|------------------------------------------------------------------------|---------------------------------------------|------------------------|
-| **GET**  | `/api/consejos` 	    | Ninguno          | Obtiene todos los consejos disponibles. 		 | `200 OK` si se encuentran consejos. <br> `404 Not Found` si no hay. |
-| **POST**  | `/api/consejos`      | `{ "titulo": "string", "usuario": "string", "mensaje": "string" }` | Crea un nuevo consejo con el título, usuario y mensaje proporcionados.| `201 Created` si el consejo se crea exitosamente. <br> `400 Bad Request` si falta un campo obligatorio o el mensaje es inválido. |
-| **PUT**  | `/api/consejos/titulo/{titulo}/usuario/{usuario}` | `{ "mensaje": "string" }`     | Modifica el mensaje de un consejo existente especificado por el título y el usuario.   | `200 OK` si el consejo se actualiza correctamente. <br> `404 Not Found` si no se encuentra el consejo con el título y usuario proporcionados. |
-| **DELETE**| `/api/consejos/titulo/{titulo}/usuario/{usuario}` | Ninguno     | Elimina un consejo especificado por el título y usuario.  | `204 No Content` si el consejo se elimina correctamente. <br> `404 Not Found` si no se encuentra el consejo. |
+| **GET**  | `/api/consejos` 	    | Ninguno          | Obtiene todos los consejos disponibles. 		 | `200 OK` si se encuentran consejos. `404 Not Found` si no hay. |
+| **POST**  | `/api/consejos`      | `{ "titulo": "string", "usuario": "string", "mensaje": "string" }` | Crea un nuevo consejo con el título, usuario y mensaje proporcionados.| `201 Created` si el consejo se crea exitosamente. `400 Bad Request` si falta un campo obligatorio o el mensaje es inválido. |
+| **PUT**  | `/api/consejos/titulo/{titulo}/usuario/{usuario}` | `{ "mensaje": "string" }`     | Modifica el mensaje de un consejo existente especificado por el título y el usuario.   | `200 OK` si el consejo se actualiza correctamente. `404 Not Found` si no se encuentra el consejo con el título y usuario proporcionados. |
+| **DELETE**| `/api/consejos/titulo/{titulo}/usuario/{usuario}` | Ninguno     | Elimina un consejo especificado por el título y usuario.  | `204 No Content` si el consejo se elimina correctamente. `404 Not Found` si no se encuentra el consejo. |
 
 ## Descripción de los Endpoints
 
