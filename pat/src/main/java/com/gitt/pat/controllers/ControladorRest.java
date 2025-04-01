@@ -17,8 +17,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/consejos") // Añadiendo esto, me ahorror tener que poner /api/consejos en todos los métodos
 // Se habilitan las peticiones desde la página de pages desplegada:
-//@CrossOrigin(origins = "https://mariabegara.github.io/p4")
-@CrossOrigin(origins = {"http://127.0.0.1:3000", "http://localhost:3000"})
+@CrossOrigin(origins = {"http://127.0.0.1:3000", "http://localhost:3000", "https://mariabegara.github.io/p4"})
 
 
 public class ControladorRest
