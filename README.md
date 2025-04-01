@@ -24,7 +24,7 @@ A continuación se muestra el la ruta, el cuerpo, la descripción y posibles res
 - `200 OK`: Si se encuentran consejos, se devuelven como una lista de objetos JSON.
 - `404 Not Found`: Si no hay consejos almacenados.
 
-> [!Nota]
+> [!NOTE]
 > Como no se ha implementado todavía la seguridad, en los consejos no se muestra el usuario que ha publicado el consejo para evitar que otro usuario modifique un consejo que no es suyo.
 
 ### 2. Crear un nuevo consejo
